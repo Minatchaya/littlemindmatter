@@ -1268,7 +1268,8 @@ body{
       align-items: end; 
       justify-content: center;
      overflow: hidden;
-
+     background: #E7F8FF;
+     background: linear-gradient(180deg, rgba(231, 248, 255, 1) 33%, rgba(227, 246, 254, 1) 65%, rgba(231, 248, 255, 1) 100%);
 }
 .sub01top-home1{
     width: 100%; 
