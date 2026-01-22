@@ -99,6 +99,11 @@ background: linear-gradient(0deg, rgba(255, 255, 255, 1) 33%, rgba(240, 240, 240
 .bgyello_topandbot{
 background: linear-gradient(180deg, rgba(255, 253, 222, 1) 21%, rgba(255, 255, 255, 1) 43%, rgba(255, 255, 255, 1) 65%, rgba(255, 252, 218, 1) 88%);
 }
+/* เหลืองบนและล่าง */
+.bgyello_leftandright{
+    background: #FFFDDE;
+background: linear-gradient(85deg, rgba(255, 253, 222, 1) 22%, rgba(255, 255, 255, 1) 39%, rgba(255, 255, 252, 1) 59%, rgba(255, 252, 218, 1) 78%);
+}
 body{
     margin: 0;
     padding: 0;
@@ -1262,6 +1267,34 @@ body{
         -webkit-transition: -webkit-transform 0.7s ease-in-out, visibility 0s 0.7s;
         transition: transform 0.7s ease-in-out, visibility 0s 0.7s;
     }
+    .overlayto_ch4page11 {
+        position: fixed;
+        width: 100%;
+        max-width:440px;
+        height: 100%;
+        top: 0;
+        margin: 0;
+        z-index:1;
+        background-color: var(--bgwhite);
+    }
+    
+    .overlay-slidedown_overlayto_ch4page11.open {
+        z-index: 1;
+        overflow: hidden ;
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out;
+        transition: transform 0.7s ease-in-out;
+    }
+    
+    .overlay-slidedown_overlayto_ch4page11{
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out, visibility 0s 0.7s;
+        transition: transform 0.7s ease-in-out, visibility 0s 0.7s;
+    }
 .covertop-home1{
     width: 100%; height: 64%;
      display: flex;
@@ -1588,7 +1621,8 @@ body{
     font-weight: bold; font-size: var(--text18) ;color: var(--textlightgray);
 }
  .submaingray16{
- font-size: var(--text16) ;color: var(--textlightgray);
+ font-size: var(--text16) ;
+ color: var(--textmain);
  }
  .submaingray20{
     font-weight: bold; font-size: var(--text18) ;color: var(--textlightgray);
@@ -2082,7 +2116,7 @@ height: 45px;
 }
 .coverchtextcenter_text{
     font-size: var(--text17); 
-        color: var(--textmain); text-align: center; line-height: 28px;
+        color: var(--textmain); text-align: center; line-height: 31px;
 }
 
 .pic-chap3-1{
@@ -2165,14 +2199,17 @@ height: 45px;
     display: flex;
     align-items: end;
     background-size: contain;
-    background-position: bottom;
+    background-position: center;
     background-repeat: no-repeat;
+    font-size: var(--text16);
+    color: var(--textdarkgreen);
+    font-weight: bold;
     background-image: url(./img/chapter3/page4/page4.png);
 }
 .subch3p4_bot{
-    font-size: var(--text20);
-    color: var(--textmain);
+    font-size: var(--text18);
     color: var(--textdarkgreen);
+    font-weight: bold;
 }
 .coverch3page5{
     display: flex; 
@@ -2272,7 +2309,7 @@ height: 45px;
     width: 100%;
     display: flex;
     align-items: center;
-    font-size: var(--text16);
+    font-size: var(--text18);
     color: var(--textdarkgreen);
     text-align: center;
     font-weight: bold;
@@ -2320,9 +2357,9 @@ height: 45px;
     font-weight: bold;
 }
 .subch3p10_bot2{
-    color: var(--textdarkgreen); 
-    font-size: var(--text18);
-     font-weight: bold;
+    color: var(--textmain); 
+    font-size: var(--text16);
+   
 }
 .coverch4page4{
     height: 100%;
@@ -2435,6 +2472,7 @@ height: 45px;
     height: 100px;
     justify-content: center;
     width: 100%;
+    text-align: end;
 }
 .subch4p5_top3{
     width: 70px; height: 70px; 
@@ -2497,11 +2535,12 @@ height: 45px;
     justify-content: center; 
     font-size: var(--text16);
     color: var(--textmain);
-    text-align: center;
+    text-align: right;
 }
 .subch4p6_top3{
     font-size: var(--text18);
     color: var(--textyellow);
+    font-weight: bold;
 }
 .coverch4p6_mid{
     display: flex;
@@ -2516,10 +2555,23 @@ height: 45px;
     justify-content: center; 
     font-size: var(--text16);
     color: var(--textmain);
-    text-align: center;
+    text-align: left;
+    padding-left: 19px;
 }
 .subch4p6_mid2{
-    font-size: var(--text18);color: var(--textyellow);
+    font-size: var(--text18);
+    color: var(--textyellow);
+    font-weight: 600;
+}
+.subch4p6_mid2_1{
+    font-size: var(--text18);
+    color: var(--textyellow);
+    font-weight: 500;
+}
+.subch4p6_mid3_1{
+    font-size: var(--text20);
+    color: var(--textyellow);
+    font-weight: bold;
 }
 .subch4p6_mid3{
     width: 100%; 
@@ -2631,6 +2683,104 @@ height: 45px;
   }
   .chap4page9-2.open,.chap4page9-3.open,.chap4page9-4.open  {
     transform: translateX(0);
+  }
+  .covercallp3{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+  }
+  .subtop_p3{
+    width: 100%;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    font-size: var(--text16);
+    color: var(--textmain);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(./img/chapter3/pages1/forest.png);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-position: center 16px;
+                 background-image: url(./img/chapter3/pages1/Asset11.png);
+  }
+  .submid_p3{
+    display: flex; width: 100%; 
+    height: 340px; 
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(./img/chapter3/pages1/forest.png);
+  }
+  .subbot_p3{
+    display: flex; 
+    width: 100%;
+    font-size: var(--text16);
+    color: var(--textmain);
+    justify-content: center;
+    line-height: 26px;
+        text-align: center;
+  }
+  .coverch4p1{
+    display: flex;
+        width: 100%; 
+        height: 100%;
+        justify-content: center;
+            flex-direction: column;
+  }
+  .sub_ch4p1_top{
+    display: flex;
+    font-size: var(--text16);
+    color: var(--textmain);
+    justify-content: center;
+    align-items: center;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .sub_ch4p1_mid{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-bottom: 20px;
+    background-image: url(./img/chapter4/pages1/Assetch1p1.png);
+    height: 350px;
+  }
+  .sub_ch4p1_bot{
+    width: 100%;
+ line-height: 26px;
+    text-align: center;
+    font-size: var(--text16);
+    color: var(--textmain);
+    flex-direction: column;
+  }
+  .coverch3p4{
+    width: 100%; 
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: var(--text17);
+    line-height: 26px;
+    color: var(--textmain);
+    height: calc(100vh - 100px)
+  }
+  .coverch4p4{
+    width: 100%; 
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: var(--text17);
+    line-height: 30px;
+    color: var(--textmain);
+    height: calc(100vh - 100px)
   }
 /* <!-- nice end --> */
 
@@ -3101,7 +3251,7 @@ height: 45px;
     z-index: 1;
     color: var(--textmain);
     width: 100%;
-    font-size: var(--text16);
+    font-size: var(--text17);
     text-align: center;
 }
 .footechap1-page3{
@@ -3847,8 +3997,7 @@ height: 45px;
         top: 0;
         margin: 0;
         z-index:1;
-        background-color: white;
-        }
+    }
     
         .overlay-slidedown_overlayto_chap4-1.open {
             z-index: 1;
@@ -4090,68 +4239,68 @@ height: 45px;
     font-size: var(--text16);
     text-align: center;
     top: 100px;
-}
-.chap5-page1-txt3{
-    position: absolute;
-    z-index: 1;
-    color: var(--textmain);
-    width: 100%;
-    font-size: var(--text16);
-    text-align: center;
-    bottom: 200px;
-}
-.chap5-page2-txt1{
-    position: absolute;
-    z-index: 1;
-    color: var(--textmain);
-    width: 100%;
-    font-size: var(--text16);
-    text-align: right;
-    top: 100px;
-    right: 50px;
-}
-.chap5-page2-txt2{
-    position: absolute;
-    z-index: 1;
-    color: var(--textmain);
-    width: 100%;
-    font-size: var(--text16);
-    text-align: left;
-    left: 35px;
-    bottom: 120px;
-}
-.chap5-page1-sizepic{
-    width: 100%; 
-    height: 240px;
-}
-.chap5-page2-sizeport{
-    width: 100%;
-    height: 500px;
-    position: absolute;
-    top: 170px;
-}
-.chap5-page2-sizehuman{
-    position: absolute;
-    position: absolute;
-    width: 40%;
-    top: 150px;
-    left: 20px;
-}
-.chap5-txt-purple{
-    color: var(--textpurple);
-    font-weight: bold;
-  }
-  .overlayto_chap5-1{
-    position: fixed;
-    width: 100%;
-    max-width:440px;
-    height: 100%;
-    top: 0;
-    margin: 0;
-    z-index:1;
-    background-repeat: unset;
-    background-size: cover;
-    background-image: url(./img/chapter5/page1/bg.png);
+    }
+    .chap5-page1-txt3{
+        position: absolute;
+        z-index: 1;
+        color: var(--textmain);
+        width: 100%;
+        font-size: var(--text16);
+        text-align: center;
+        bottom: 200px;
+    }
+    .chap5-page2-txt1{
+        position: absolute;
+        z-index: 1;
+        color: var(--textmain);
+        width: 100%;
+        font-size: var(--text16);
+        text-align: right;
+        top: 100px;
+        right: 50px;
+    }
+    .chap5-page2-txt2{
+        position: absolute;
+        z-index: 1;
+        color: var(--textmain);
+        width: 100%;
+        font-size: var(--text16);
+        text-align: left;
+        left: 35px;
+        bottom: 120px;
+    }
+    .chap5-page1-sizepic{
+        width: 100%; 
+        height: 240px;
+    }
+    .chap5-page2-sizeport{
+        width: 100%;
+        height: 500px;
+        position: absolute;
+        top: 170px;
+    }
+    .chap5-page2-sizehuman{
+        position: absolute;
+        position: absolute;
+        width: 40%;
+        top: 150px;
+        left: 20px;
+    }
+    .chap5-txt-purple{
+        color: var(--textpurple);
+        font-weight: bold;
+    }
+    .overlayto_chap5-1{
+        position: fixed;
+        width: 100%;
+        max-width:440px;
+        height: 100%;
+        top: 0;
+        margin: 0;
+        z-index:1;
+        background-repeat: unset;
+        background-size: cover;
+        background-image: url(./img/chapter5/page1/bg.png);
     }
 
     .overlay-slidedown_overlayto_chap5-1.open {
@@ -4183,26 +4332,26 @@ height: 45px;
         background-repeat: unset;
         background-size: cover;
         background-image: url(./img/chapter5/page1/bg.png);
-        }
-    
-        .overlay-slidedown_overlayto_chap5-2.open {
-            z-index: 1;
-            overflow: hidden ;
-            visibility: visible;
-            -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-            -webkit-transition: -webkit-transform 0.7s ease-in-out;
-            transition: transform 0.7s ease-in-out;
-        }
-    
-        .overlay-slidedown_overlayto_chap5-2{
+    }
+        
+    .overlay-slidedown_overlayto_chap5-2.open {
+        z-index: 1;
+        overflow: hidden ;
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out;
+        transition: transform 0.7s ease-in-out;
+    }
+        
+    .overlay-slidedown_overlayto_chap5-2{
             visibility: hidden;
             -webkit-transform: translateX(100%);
             transform: translateX(100%);
             -webkit-transition: -webkit-transform 0.7s ease-in-out, visibility 0s 0.7s;
             transition: transform 0.7s ease-in-out, visibility 0s 0.7s;
-        }
-        .overlayto_chap5-3{
+    }
+    .overlayto_chap5-3{
             position: fixed;
             width: 100%;
             max-width:440px;
@@ -4211,9 +4360,9 @@ height: 45px;
             margin: 0;
             z-index:1;
             background-color: white;
-            }
+    }
         
-            .overlay-slidedown_overlayto_chap5-3.open {
+    .overlay-slidedown_overlayto_chap5-3.open {
                 z-index: 1;
                 overflow: hidden ;
                 visibility: visible;
@@ -4221,26 +4370,26 @@ height: 45px;
                 transform: translateX(0%);
                 -webkit-transition: -webkit-transform 0.7s ease-in-out;
                 transition: transform 0.7s ease-in-out;
-            }
+    }
         
-            .overlay-slidedown_overlayto_chap5-3{
+    .overlay-slidedown_overlayto_chap5-3{
                 visibility: hidden;
                 -webkit-transform: translateX(100%);
                 transform: translateX(100%);
                 -webkit-transition: -webkit-transform 0.7s ease-in-out, visibility 0s 0.7s;
                 transition: transform 0.7s ease-in-out, visibility 0s 0.7s;
-            }
-  .overlayto_chap5-4{
-    position: fixed;
-    width: 100%;
-    max-width:440px;
-    height: 100%;
-    top: 0;
-    margin: 0;
-    z-index:1;
-    background-repeat: unset;
-    background-size: cover;
-    background-image: url(./img/chapter5/page4/bg.png);
+    }
+    .overlayto_chap5-4{
+        position: fixed;
+        width: 100%;
+        max-width:440px;
+        height: 100%;
+        top: 0;
+        margin: 0;
+        z-index:1;
+        background-repeat: unset;
+        background-size: cover;
+        background-image: url(./img/chapter5/page4/bg.png);
     }
 
     .overlay-slidedown_overlayto_chap5-4.open {
@@ -4271,26 +4420,201 @@ height: 45px;
         background-repeat: unset;
         background-size: cover;
         background-image: url(./img/chapter5/page5/bg.png);
-        }
+    }
     
-        .overlay-slidedown_overlayto_chap5-5.open {
-            z-index: 1;
-            overflow: hidden ;
-            visibility: visible;
-            -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-            -webkit-transition: -webkit-transform 0.7s ease-in-out;
-            transition: transform 0.7s ease-in-out;
-        }
+    .overlay-slidedown_overlayto_chap5-5.open {
+        z-index: 1;
+        overflow: hidden ;
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out;
+        transition: transform 0.7s ease-in-out;
+    }
     
-        .overlay-slidedown_overlayto_chap5-5{
-            visibility: hidden;
-            -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-            -webkit-transition: -webkit-transform 0.7s ease-in-out, visibility 0s 0.7s;
-            transition: transform 0.7s ease-in-out, visibility 0s 0.7s;
-        }
+    .overlay-slidedown_overlayto_chap5-5{
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out, visibility 0s 0.7s;
+        transition: transform 0.7s ease-in-out, visibility 0s 0.7s;
+    }
 
+    .overlayto_chap5-6{
+        position: fixed;
+        width: 100%;
+        max-width:440px;
+        height: 100%;
+        top: 0;
+        margin: 0;
+        z-index:1;
+        background-color: var(--bgwhite);     
+    }
+        
+    .overlay-slidedown_overlayto_chap5-6.open {
+        z-index: 1;
+        overflow: hidden ;
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out;
+        transition: transform 0.7s ease-in-out;
+    }
+        
+    .overlay-slidedown_overlayto_chap5-6{
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out, visibility 0s 0.7s;
+        transition: transform 0.7s ease-in-out, visibility 0s 0.7s;
+    }
+
+    .overlayto_chap5-7{
+        position: fixed;
+        width: 100%;
+        max-width:440px;
+        height: 100%;
+        top: 0;
+        margin: 0;
+        z-index:1;
+        background-color: var(--bgwhite);
+    }
+            
+    .overlay-slidedown_overlayto_chap5-7.open {
+        z-index: 1;
+        overflow: hidden ;
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out;
+        transition: transform 0.7s ease-in-out;
+    }
+            
+    .overlay-slidedown_overlayto_chap5-7{
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out, visibility 0s 0.7s;
+        transition: transform 0.7s ease-in-out, visibility 0s 0.7s;
+    }
+
+    .overlayto_chap5-8{
+        position: fixed;
+        width: 100%;
+        max-width:440px;
+        height: 100%;
+        top: 0;
+        margin: 0;
+        z-index:1;
+        background-color: var(--bgwhite);
+    }
+                
+    .overlay-slidedown_overlayto_chap5-8.open {
+        z-index: 1;
+        overflow: hidden ;
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out;
+        transition: transform 0.7s ease-in-out;
+    }
+                
+    .overlay-slidedown_overlayto_chap5-8{
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out, visibility 0s 0.7s;
+        transition: transform 0.7s ease-in-out, visibility 0s 0.7s;
+    }
+    .overlayto_chap5-9{
+        position: fixed;
+        width: 100%;
+        max-width:440px;
+        height: 100%;
+        top: 0;
+        margin: 0;
+        z-index:1;
+        background-repeat: unset;
+        background-size: cover;
+        background-image: url(./img/chapter5/bg-chap5.png);
+    }
+                    
+    .overlay-slidedown_overlayto_chap5-9.open {
+        z-index: 1;
+        overflow: hidden ;
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out;
+        transition: transform 0.7s ease-in-out;
+    }
+                    
+     .overlay-slidedown_overlayto_chap5-9{
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out, visibility 0s 0.7s;
+        transition: transform 0.7s ease-in-out, visibility 0s 0.7s;
+    }
+    .overlayto_chap5-10{
+        position: fixed;
+        width: 100%;
+        max-width:440px;
+        height: 100%;
+        top: 0;
+        margin: 0;
+        z-index:1;
+        background-color: var(--bgwhite);                        
+    }
+                        
+    .overlay-slidedown_overlayto_chap5-10.open {
+        z-index: 1;
+        overflow: hidden ;
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out;
+        transition: transform 0.7s ease-in-out;
+    }
+                        
+    .overlay-slidedown_overlayto_chap5-10{
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out, visibility 0s 0.7s;
+        transition: transform 0.7s ease-in-out, visibility 0s 0.7s;
+    }
+    .overlayto_chap5-11{
+        position: fixed;
+        width: 100%;
+        max-width:440px;
+        height: 100%;
+        top: 0;
+        margin: 0;
+        z-index:1;
+        background-repeat: unset;
+        background-size: cover;
+        background-image: url(./img/chapter5/bg-chap5.png);
+    }
+                            
+    .overlay-slidedown_overlayto_chap5-11.open {
+        z-index: 1;
+        overflow: hidden ;
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out;
+        transition: transform 0.7s ease-in-out;
+    }
+                            
+    .overlay-slidedown_overlayto_chap5-11{
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.7s ease-in-out, visibility 0s 0.7s;
+        transition: transform 0.7s ease-in-out, visibility 0s 0.7s;
+    }
+               
         
     .overlayto_chap5-resultno{
         position: fixed;
@@ -4352,8 +4676,195 @@ height: 45px;
             height: 100%;
             object-fit: contain;
         }
+        .chap5-page6-boat{
+            width: 106%;
+            position: absolute;
+            bottom: 0;
+        }
+        .chap5-page6-bgcontent{
+            width: 100%;
+            height: 350px;
+            position: relative;
+            background-color: var(--bgwhite);
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        .chap5-page7-bgcontent{
+            width: 100%;
+            height: 350px;
+            position: relative;
+            background-image: url(./img/chapter5/page7/bg.png);
+            background-repeat: round;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        .chap5-page8-bgcontent{
+            width: 100%;
+            height: 350px;
+            position: relative;
+            background-image: url(./img/chapter5/page8/boat.png);
+            background-repeat: round;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        .fade-step-page8-1 {
+            opacity: 0;
+            transform: translateX(-30px); 
+            transition:
+              opacity 2.5s ease,
+              transform 2.5s ease;
+          }
+          
+          .fade-step-page8-1.show {
+            opacity: 1;
+            transform: translateX(0); 
+          }
+          .chap5-page8-bgcontent{
+            width: 100%;
+            height: 350px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        .chap5-page8-boat{
+            width: 106%;
+            position: absolute;
+            bottom: 0;
+        }
+        .fade-step-page8-2 {
+            opacity: 0;
+            transform: translateX(30px); 
+            transition:
+              opacity 2.5s ease,
+              transform 2.5s ease;
+          }
+          
+          .fade-step-page8-2.show {
+            opacity: 1;
+            transform: translateX(-20); 
+          }
+          .chap5-page8-fish1{
+            width: 60%;
+            position: absolute;
+            bottom: 0;
+        }
+
+          .chap5-page8-fish2{
+            width: 60%;
+            position: absolute;
+            bottom: 0;
+        }  
+        .chap5-page8-bgcontent1{
+            width: 100%;
+            height: 350px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        .chap5-page8-bgcontent2{
+            width: 100%;
+            height: 100px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        .chap5-page8-fish3{
+            width: 45%;
+            position: absolute;
+            bottom: 0;
+            top: 10px;
+            left: 50px;
+        }  
+        .fade-step-page8-3 {
+            opacity: 0;
+            transform: translateX(30px); 
+            transition:
+              opacity 2.5s ease,
+              transform 2.5s ease;
+          }
+          
+          .fade-step-page8-3.show {
+            opacity: 1;
+            transform: translateX(-20); 
+          }
+          .chap5-page8-fish1{
+            width: 60%;
+            position: absolute;
+            bottom: 0;
+        }
+        .pic-chap5-10{
+            width: 90%;
+            height: 75%;
+            /* margin: 0 20px; */
+            object-fit: contain;
+            position: relative;
+            background-image: url(./img/chapter5/chap5-10.png);
+            background-size: cover;
+            border-radius: 10px;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+        }
+        .pic-chap5-11{
+            width: 90%;
+            height: 75%;
+            margin: 0 20px;
+            object-fit: contain;
+            position: relative;
+            background-image: url(./img/chapter5/chap5-11.png);
+            background-size: cover;
+            border-radius: 10px;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+        }
+        .pic-chap5-12{
+            width: 90%;
+            height: 75%;
+            margin: 0 20px;
+            object-fit: contain;
+            position: relative;
+            background-image: url(./img/chapter5/chap5-12.png);
+            background-size: cover;
+            border-radius: 10px;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+        }
+        .chap5page10-2,.chap5page10-3 {
+            position: absolute;
+            inset: 0;                /* = top:0 left:0 right:0 bottom:0 */
+            width: 100%;
+            height: 100%;
+            transform: translateX(100%);
+            transition: transform 1.5s ease;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+         
+          }
+          .chap5page10-2.open,.chap5page10-3.open {
+            transform: translateX(0);
+          }
+
+      
+
+        
+
+
     
   /* chap5 end */
+
 
   /* result start */
   .bg-result{
