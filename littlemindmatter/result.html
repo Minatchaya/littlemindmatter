@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+                 <!-- css  -->
+                 <link rel="stylesheet" type="text/css" href="./littlemind_css.css"/>
+                 <!-- font  -->
+                 <link rel="preconnect" href="https://fonts.googleapis.com">
+                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                 <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap" rel="stylesheet">
+                 <!-- script  -->
+                 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div style="height: 50px; width: 150px; background-color: orange;"
+    onclick="openOverlay('.overlayto_all-result')"> openresult</div>
+
+    <div class="overlay overlayto_all-result overlay-slidedown_overlayto_all-result">
+       
+        <div id="result1" style="overflow: scroll; height: 100%; " >
+           <div class="fade-step-page fade-800 bg-result" >
+            <div class="fade-step-page fade-1800 result-txt1" >
+                <span class="result-txt2">หัวใจของอัศวินน้อยกล้าหาญมาก</span> <br>
+                  ปราสาทแห่งความรู้สึกสวยงามแบบที่ฝันไว้
+            </div>
+            <div class="fade-step-nest fade-2700 result-circle" >
+                <img class="result-sizecircle" src="./img/result/result1/profileresult1.png">
+            </div>
+              <img class="fade-step-page fade-1500 result-sizebg" src="./img/result/bg1.png">
+
+           </div>
+           <div class="fade-step-page fade-2700 result-txt3" >
+                <img class="result-sizetxt" src="./img/result/result1/txt-result1.png">
+           </div>
+           <div class="fade-step-page fade-2700 result-txt4" >
+                ส่วนผสมหัวใจที่สำคัญ
+           </div>
+           <div class="fade-step-page fade-2700 result-box" >
+                <div class="result-sizebox">
+                    <img class="result-sizeitem" src="./img/result/result1/item1.png">
+                    <div class="result-txtitem">
+                        การเปิดรับ
+                    </div>
+                </div>
+                <div class="result-sizebox">
+                    <img class="result-sizeitem" src="./img/result/result1/item2.png">
+                    <div class="result-txtitem">
+                        ความสม่ำเสมอ
+                    </div>
+                </div>
+                <div class="result-sizebox">
+                    <img class="result-sizeitem" src="./img/result/result1/item3.png">
+                    <div class="result-txtitem">
+                        พื้นที่ร่วมกัน
+                    </div>
+                </div>
+           </div>
+           <div class="fade-step-page fade-2700 result-box-btn">
+                <div><span style="font-weight: bold;">คลิกดาวน์โหลด</span> คู่มือคำแนะนำ</div>
+                <div class="bg-gd-pink result-btn">
+                    ครอบครัวที่มีลูกมากกว่า 1 คน
+                </div>
+                <div class="bg-gd-gray result-btn">
+                    ครอบครัวที่ปกป้องลูกมากเกินไป
+                </div>
+                <div class="bg-gd-green result-btn">
+                    ครอบครัวที่ผ่านการสูญเสีย
+                </div>
+                <div class="bg-gd-yellow result-btn">
+                    ครอบครัวที่มีการหย่าร้างกัน
+                </div>
+                <div class="bg-gd-purple result-btn">
+                    ครอบครัวที่มีการย้ายถิ่นฐาน
+                </div>
+
+           </div>
+        </div>
+     
+        <div id="result2" style="display:none; background-color: plum; width: 100px; height: 100px;">1 คะแนน</div>
+        <div id="result3" style="display:none; background-color: yellow; width: 100px; height: 100px;">2-3 คะแนน</div>
+        <div id="result4" style="display:none; background-color: navajowhite; width: 100px; height: 100px;">4-5 คะแนน</div>
+
+        
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function openOverlay(selector) {
+    
+    const $next = $(selector);
+    const $current = $('.overlay.open').not($next);
+    
+    // เปิดหน้าใหม่
+    $next
+      .addClass('open')
+      .removeClass('hidden')
+      .css('z-index', 2);
+    
+    // หน้าเก่าอยู่ล่าง
+    $current.css('z-index', 1);
+    
+    // หลัง slide-in → fade หน้าเก่า
+    setTimeout(() => {
+      $current.addClass('fade-up');
+    }, 700);
+    
+    // หลัง fade → ซ่อนหน้าเก่า (ไม่ remove open)
+    setTimeout(() => {
+      $current
+        .addClass('hidden')
+        .removeClass('fade-up')
+        .css({
+          zIndex: '',
+          top: '',
+          opacity: '',
+          transform: 'translateX(0)' // 🔒 ป้องกันเด้ง
+        });
+    }, 1100);
+    
+    /* ===== 800ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-800').addClass('show');
+    }, 800);
+    
+    /* ===== 1000ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-1000').addClass('show');
+    }, 1000);
+    
+    /* ===== 1500ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-1500').addClass('show');
+    }, 1500);
+    
+    /* ===== 1800ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-1800').addClass('show');
+    }, 1800);
+    
+    /* ===== 2100ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-2100').addClass('show');
+    }, 2100);
+    
+    /* ===== 2500ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-2500' ).addClass('show');
+    }, 2500);
+    
+    /* ===== 2700ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-2700').addClass('show');
+    }, 2700);
+    
+    /* ===== 3000ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-3000').addClass('show');
+    }, 3000);
+    
+    /* ===== 3200ms ===== */
+    setTimeout(() => {
+      $(selector).find(
+        '.fade-3200'
+      ).addClass('show');
+    }, 3200);
+    
+    /* ===== 3300ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-3300').addClass('show');
+    }, 3300);
+    
+    /* ===== 3400ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-3400').addClass('show');
+    }, 3400);
+    
+    /* ===== 3900ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-3900').addClass('show');
+    }, 3900);
+    
+    /* ===== 4200ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-4200').addClass('show');
+    }, 4200);
+    
+    /* ===== 4500ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-4500').addClass('show');
+    }, 4500);
+    
+    /* ===== 6000ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-6000').addClass('show');
+    }, 6000);
+    
+    /* ===== 6500ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-6500').addClass('show');
+    }, 6500);
+    
+    /* ===== 7000ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-7000').addClass('show');
+    }, 7000);
+    
+    /* ===== 7800ms ===== */
+    setTimeout(() => {
+      $(selector).find(
+        '.fade-7800'
+      ).addClass('show');
+    }, 7800);
+    
+    /* ===== 8800ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-8800').addClass('show');
+    }, 8800);
+    
+    }
+    
+    
+    </script>

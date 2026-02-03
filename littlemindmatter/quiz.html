@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+         <!-- css  -->
+         <link rel="stylesheet" type="text/css" href="./littlemind_css.css"/>
+         <!-- font  -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap" rel="stylesheet">
+         <!-- script  -->
+         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div style="height: 50px; width: 150px; background-color: orange;"
+    onclick="openOverlay('.overlayto_testquiz')"> เริ่มควิซ </div>
+    
+    <!-- home page9 start -->
+    <div  class="overlayto_testquiz overlay-slidedown_overlayto_testquiz">
+
+        <div  class="page9-page">
+            <div  class="fade-step-page txtpage9 fade-text" >
+                ก่อนเริ่มผจญภัยไปในโลกแห่งความรู้สึก<br>
+                อย่าลืมเช็กความพร้อมของอัศวินน้อย<br>
+                <span class="txtblue">ผ่านแบบทดสอบส่วนผสมของหัวใจ !</span>
+                <br>
+                <br>
+                <br>
+                ทุกคำตอบ คือ ส่วนผสมชั้นดี <span class="txtblue">เลือกคำตอบที่เป็นจริง</span><br>
+                เพื่อหลอมรวมพลังงานในหัวใจให้เต็มเปี่ยม
+            </div>
+            <img class="fade-step-page bg-page9 fade-bg"  src="./img/homepage/page9/bg.png">
+        </div>
+    
+
+        <div class="footerpage9">
+            <div  class="fade-step-page fade-next" 
+            onclick="$('.overlayto_openquiz').addClass('open');
+            setTimeout(function(){ $('#txt-page10').addClass('show');
+            }, 1200);"   >
+                แตะเพื่อเริ่มทำแบบทดสอบ 
+            </div>
+        </div>
+     </div>
+    <!-- home page9 end -->
+
+
+
+    <!-- home page10 start -->
+       <div class="overlayto_openquiz  overlay-slidedown_overlayto_openquiz ">
+
+        <div  class="page10-page">
+            <div id="txt-page10" class="fade-soft" style="display: flex; background-color: #E9F9FF; flex-direction: column; padding: 20px; border-radius: 10px; font-size: 16px; text-align: center; font-weight: 500;">
+                ฉัน หรือคู่สมรสของฉัน เคยเป็นผู้ป่วยใน<br>
+                กลุ่มโรควิตกกังวล (Anxiety Disorder)<br>
+                เช่น โรคตื่นตระหนก (Panic Disorder)<br>
+                หรือ โรคย้ำคิดย้ำทำ (OCD)
+                <div class="mg-t-btnquiz">
+                    <div  class="choice" value="false" data-question="1">ใช่</div>
+                    <div  class="choice"  value="true" data-question="1">ไม่ใช่</div>
+                </div>
+            </div>
+
+        </div>
+       
+
+        <div class="btn-next-page " >
+            <div class="btn-page1"
+            onclick="$('.overlayto_quiz1').addClass('open');
+            setTimeout(function()
+            { $('#txt-page10-1').addClass('show');}, 1200);">
+                แตะเพื่อไปต่อ
+            </div>
+        </div>
+     </div>
+
+    <!-- home page10 start -->
+
+    <!-- home page11 start  -->
+       <div class="overlayto_quiz1 overlay-slidedown_overlayto_quiz1">
+
+            <div class="page11-page">
+                <div id="txt-page10-1" class="fade-soft" >
+                    <div class="box-quizpage">
+                        <div>
+                            ลูกสนิทและพูดคุยกับฉันอยู่เสมอ
+                        </div>
+                        <div class="mg-t-btnquiz">
+                            <div  class="choice"  value="true" data-question="2">ใช่</div>
+                            <div  class="choice"  value="false" data-question="2">ไม่ใช่</div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="box-quizpage">
+                        <div>
+                            ลูกไว้ใจและกล้าปรึกษา หรือ<br>
+                            ขอความช่วยเหลือจากฉันเสมอ ๆ
+                        </div>
+                        <div class="mg-t-btnquiz">
+                            <div  class="choice"  value="true" data-question="3">ใช่</div>
+                            <div  class="choice"  value="false" data-question="3">ไม่ใช่</div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="box-quizpage">
+                        <div>
+                            ฉันกับลูกสนิทกันมาก จนบางครั้ง<br>
+                            ทำให้เขาขาดความเป็นอิสระ
+                        </div>
+                        <div  class="mg-t-btnquiz">
+                            <div  class="choice" value="false" data-question="4">ใช่</div>
+                            <div  class="choice" value="true" data-question="4">ไม่ใช่</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="btn-next-page">
+                <div class="btn-page2"
+                onclick="$('.overlayto_quiz2').addClass('open');
+                setTimeout(function()
+                { $('#txt-page10-2').addClass('show');}, 1200);">
+                    แตะเพื่อไปต่อ
+                </div>
+            </div>
+       </div>
+    <!-- home page11 end -->
+
+    <!-- home page12 start -->
+    <div class="overlayto_quiz2 overlay-slidedown_overlayto_quiz2">
+
+
+        <div class="page12-page">
+            <div id="txt-page10-2" class="fade-soft" >
+                <div class="box-quizpage">
+                    <div>
+                      ฉันเคยแสดงอารมณ์ไม่พอใจ<br>หรือโกรธใส่ลูกโดยไม่มีเหตุผล
+                    </div>
+                    <div class="mg-t-btnquiz">
+                        <div  class="choice"   value="false" data-question="5">ใช่</div>
+                        <div  class="choice"   value="true" data-question="5">ไม่ใช่</div>
+                    </div>
+                </div>
+                <br>
+                <div class="box-quizpage">
+                    <div>
+                      ลูกต้องการให้ฉันอยู่ด้วยตลอดเวลา<br>เช่น งอแงไม่อยากไปโรงเรียน
+                    </div>
+                    <div class="mg-t-btnquiz">
+                        <div  class="choice"   value="false" data-question="6">ใช่</div>
+                        <div  class="choice"   value="true" data-question="6">ไม่ใช่</div>
+                    </div>
+                </div>
+                <br>
+                <div class="box-quizpage">
+                    <div>
+                        ฉันเคยลืม หรือไม่ตรงต่อเวลาตามที่<br>
+                        สัญญากับลูกไว้ เช่น ไปรับจากโรงเรียนช้า<br>
+                        หรือไม่ทำตามสิ่งที่รับปากไว้
+                    </div>
+                    <div class="mg-t-btnquiz">
+                        <div  class="choice"   value="false" data-question="7">ใช่</div>
+                        <div  class="choice"   value="true" data-question="7">ไม่ใช่</div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        
+        </div>
+
+
+    <div class="btn-next-page ">
+            <div class="btn-page3" 
+            onclick="$('.overlayto_quiz3').addClass('open');
+            setTimeout(function()
+            { $('#summeryquiz').addClass('show');}, 1000);" >
+                แตะเพื่อไปต่อ
+            </div>
+    </div>
+
+    </div>
+
+    <!-- home page12 end -->
+
+    <!-- home page13 start -->
+    <div class="overlayto_quiz3 overlay-slidedown_overlayto_quiz3">
+
+        <div id="summeryquiz" class="fade-soft page13-page" > 
+                <div  class="page13-txthead">
+                    พลังงานหัวใจของอัศวินน้อย <br>
+                    <div class="txtblue page13-score">
+                        <span id="sumquiz"></span>/7
+                    </div> 
+                    <div>
+                        <img class="page13-sizepic" src="./img/homepage/page13/prince.png">
+                    </div>
+                </div>
+                <div id="answerquizhigh">
+                    <img style="width: 100%; height: 100%; display: none;" src="./img/homepage/quiz/answerquizhigh.png">
+                </div>
+                <div id="answerquizlow">
+                    <img  style="width: 100%; height: 100%; display: none;" src="./img/homepage/quiz/answerquizlow.png">
+        
+                </div>
+
+                <div class="btn-next-page " >
+                    <div onclick="openOverlay('.overlayto_endquiz')">
+                        แตะเพื่อเริมผจญภัย
+                    </div>
+        
+                </div>
+
+
+        </div>
+    </div>
+     <!-- home page13 end -->
+
+     <!-- home page14 start -->
+      <div class="overlayto_endquiz overlay-slidedown_overlayto_endquiz">
+
+        <div class="page14-page">
+            <div  class="fade-step-page fade-text" style="position: absolute;  z-index: 1; color: #494949; width: 100%;  font-size: 16px; text-align: center;">
+               
+                <span class="txtblue">อัศวินน้อยพร้อมผจญภัย !</span>
+                <br>
+                <br>
+                พลังงานหัวใจไม่สามารถคงอยู่ได้ตลอดไป<br>
+                เพราะฉะนั้น ใจดีกับหัวใจของเขาหน่อยนะ
+            </div>
+            <img  class="fade-step-page bg-page9 fade-bg"  src="./img/homepage/page9/bg.png">
+        </div>
+    
+
+        <div class="footerpage14">
+            <div  class="fade-step-page fade-next" 
+            onclick=""  >
+                แตะเพื่อไปต่อ
+            </div>
+        </div>
+
+      </div>
+
+     <!-- home page14 end -->
+</body>
+</html>
+
+<script>
+    $(function () {
+    
+        let quizScore = {};   // เก็บ true/false
+        let answered = {};    // เก็บว่าเลือกแล้วหรือยัง
+    
+        // ซ่อนปุ่ม next ทุกหน้า
+        $('.btn-page1, .btn-page2, .btn-page3').hide();
+    
+        // เลือกคำตอบ
+        $('[value]').on('click', function () {
+    
+            let q = $(this).data('question');
+            let isCorrect = $(this).attr('value') === 'true';
+    
+            quizScore[q] = isCorrect;
+            answered[q] = true;
+
+            // เปลี่ยนสีปุ่ม
+            $('[data-question="'+q+'"]').removeClass('active');
+            $(this).addClass('active');
+    
+            checkPageComplete();
+        });
+    
+        function checkPageComplete() {
+    
+            // หน้า 1 → ข้อ 1
+            if (answered[1]) {
+                $('.btn-page1').fadeIn(1800,'swing');
+            }
+    
+            // หน้า 2 → ข้อ 2–4
+            if (answered[2] && answered[3] && answered[4]) {
+                $('.btn-page2').fadeIn(1800,'swing');
+            }
+    
+            // หน้า 3 → ข้อ 5–7
+            if (answered[5] && answered[6] && answered[7]) {
+                $('.btn-page3').fadeIn(1800,'swing');
+            }
+        }
+    
+        // แสดงผลรวม (หน้า overlayto_quiz3)
+        $('.overlayto_quiz3').on('transitionend webkitTransitionEnd', function () {
+    
+            let total = 0;
+    
+            $.each(quizScore, function (_, v) {
+                if (v) total++;
+            });
+    
+            $('#sumquiz').text(total);
+    
+            $('#answerquizhigh img, #answerquizlow img').hide();
+    
+            if (total >= 6) {
+                $('#answerquizhigh img').show();
+            } else {
+                $('#answerquizlow img').show();
+            }
+        });
+    
+    });
+    </script>
+
+<script>
+    function openOverlay(selector) {
+    
+      $(selector).addClass('open');
+    
+      setTimeout(() => {
+        $(selector).find('.fade-bg').addClass('show');
+      }, 800);
+    
+      setTimeout(() => {
+        $(selector).find('.fade-text').addClass('show');
+      }, 1500);
+    
+      setTimeout(() => {
+        $(selector).find('.fade-next').addClass('show');
+      }, 2500);
+    
+    }
+    </script>
+    
+   
+
+    

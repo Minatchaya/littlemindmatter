@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+              <!-- css  -->
+              <link rel="stylesheet" type="text/css" href="./littlemind_css.css"/>
+              <!-- font  -->
+              <link rel="preconnect" href="https://fonts.googleapis.com">
+              <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+              <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap" rel="stylesheet">
+              <!-- script  -->
+              <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div style="height: 50px; width: 150px; background-color: orange;"
+    onclick="openOverlay('.overlayto_chap5-1')"> เริ่มchapter5 </div>
+
+    <!-- chap5 page 1 start -->
+    <div  class="overlay overlayto_chap5-1 overlay-slidedown_overlayto_chap5-1">
+        <div class="chap1-page3">
+           <div class="fade-step-nest chap5-page1-txt2 fade-1500">
+            กว่าพายุจะสงบก็ล่วงเลยมาถึงยามเย็น<br>
+            ครอบครัวอัศวินจึงต้องหาเส้นทางใหม่<br> 
+            เพื่อให้สามารถเดินทางถึงปราสาทได้ก่อนพลบค่ำ
+           </div>
+           <div  class="fade-step-nest fade-1800 chap5-page1-sizepic">
+            <img style="width: 100%; height: 100%;" src="./img/chapter5/page1/water.png">
+           </div>
+           <div class="fade-step-nest chap5-page1-txt3 fade-2700">
+            พวกเขาเลยตัดสินใจเดินเลี่ยงมาทาง<br>
+            <span class="chap5-page1-txt">แม่น้ำสายเล็ก ๆ </span> แทน
+
+           </div>
+            
+
+        </div>
+        
+        <div class="footechap1-page3">
+            <div  class="fade-step-page fade-3200" 
+            onclick="openOverlay('.overlayto_chap5-2')"   >
+                แตะเพื่อไปต่อ
+            </div>
+        </div>
+    </div>
+     <!-- chap5 page 1 end -->
+
+    <!-- chap5 page 2 start -->
+    <div  class="overlay overlayto_chap5-2 overlay-slidedown_overlayto_chap5-2">
+        <div class="fade-step-nest chap5-page2-txt1 fade-1500">
+            จนมาเจอเข้ากับคุณลุงคนเรือ<br>
+            กำลังจะเคลื่อนเรือไม้ออกจากท่า
+        </div>
+        <div class="chap5-page2-sizeport fade-step-nest fade-2100">
+            <img style="width: 100%; height: 100%;" src="./img/chapter5/page2/port.png">
+        </div>
+        <div class="chap5-page2-sizehuman fade-step-nest fade-2700">
+            <img style="width: 100%; height: 100%;" src="./img/chapter5/page2/human.png">
+        </div>
+        <div class="fade-step-nest chap5-page2-txt2 fade-3900">
+            แต่ดูเหมือนว่า<br>
+            <span class="chap5-txt-purple">จะเหลือที่นั่งบนเรือไม้เพียงที่นั่งเดียว</span><br>
+            ที่จะบรรทุกไปพร้อมกับคนเรือได้
+        </div>
+        
+        <div class="footechap1-page3">
+            <div   class="fade-step-page fade-4500" 
+            onclick="openOverlay('.overlayto_chap5-3')"   >
+                แตะเพื่อไปต่อ
+            </div>
+        </div>
+    </div>
+    <!-- chap5 page 2 end -->
+
+    <!-- chap5 page 3 start -->
+    <div class="overlay overlayto_chap5-3 overlay-slidedown_overlayto_chap5-3">
+        <div class="page-condition fade-step-page fade-1000">
+            <div class="chap1-pic">
+                <img class="chap1-size-pic" src="./img/chapter5/page3/picchap5-3.png">
+            </div>
+
+            <div class="bg-btn-condition">
+                <div onclick="openOverlay('.overlayto_chap5-4')" class="btn-condition"  value="true">
+                    <span style="font-weight: bold;">ฉันจำเป็นต้องให้ลูกนั่งล่วงหน้าไปคนเดียว</span><br>
+                    (ใช่ ครอบครัวของฉันไม่ได้อยู่ด้วยกัน)
+                </div>
+                <div onclick="openOverlay('.overlayto_chap5-resultno')" class="btn-condition" value="false">
+                    <span style="font-weight: bold;">ฉันให้คุณลุงคนเรือไปก่อนดีกว่า</span><br>               
+                    (ไม่ใช่ ครอบครัวของฉันอยู่พร้อมหน้า)
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="footerpage14">
+            <div class="fade-step-page fade-2500">
+                เลือกคำตอบตามประเภทครอบครัวของคุณ
+            </div>
+        </div>
+    </div>
+    <!-- chap5 page 3 end-->
+
+    <!-- chap5 page 4 start-->
+    <div class="overlay overlayto_chap5-4 overlay-slidedown_overlayto_chap5-4">
+
+        <div  class="chap1-page4">
+           
+                <div  class="fade-step-page txtchap1-page4 fade-1500" >
+                    อัศวินคิดไตร่ตรองอย่างถี่ถ้วน<br>
+                    พ่อแม่จะให้เขานั่งไปคนเดียวจริง ๆ หรอ
+                </div>
+                <br>
+                <div class="fade-step-page fade-1800 chap5-page4-bgcontent">
+                    <img class="fade-step-nest fade-2500 chap5-page4-prince" src="./img/chapter5/page4/prince.png">
+
+                </div>
+                <br>
+                <div  class="fade-step-nest   fade-3000 txtchap1-page4" >
+                    เขาไม่กล้าไปกับคุณลุงเพียงลำพังหรอก<br>
+                    <span class="chap5-page1-txt">ไม่ชินเอาซะเลยจริง ๆ </span><br>
+                    เมื่อต้องอยู่ในสถานการณ์แบบนี้
+                </div>
+                <br>
+     
+           
+        </div>
+    
+
+        <div class="footechap1-page3" style="z-index: 2;">
+            <div  class="fade-step-page fade-3400" 
+            onclick="openOverlay('.overlayto_chap5-5')"   >
+                แตะเพื่อไปต่อ
+            </div>
+        </div>
+
+     </div>
+    <!-- chap5 page 4 end-->
+
+    <!-- chap5 page 5 start-->
+    <div class="overlay overlayto_chap5-5 overlay-slidedown_overlayto_chap5-5">
+
+        <div  class="chap1-page4">
+           
+                <div class="fade-step-page  fade-1500 chap5-page5-boxpic" >
+                    <img class="chap5-page5-sizepic" src="./img/chapter5/page5/content.png">
+                    
+                </div>
+              
+        </div>
+    
+        <div class="footechap1-page3" style="z-index: 2;">
+            <div  class="fade-step-page fade-2500" 
+            onclick="openOverlay('.overlayto_chap5-6')"   >
+                แตะเพื่อไปต่อ
+            </div>
+        </div>
+     </div>
+    <!-- chap5 page 5 end -->
+
+    <!-- chap5 page 6 start-->
+        <div class="overlay overlayto_chap5-6 overlay-slidedown_overlayto_chap5-6">
+
+            <div  class="chap1-page4">
+           
+                <div  class="fade-step-page txtchap1-page4 fade-1500" >
+                    แม้ใจไม่อยากจะทิ้งพ่อกับแม่ไป<br>
+                    แต่อัศวินน้อยก็จำเป็นต้องออกเดินทาง<br>
+                    ผจญภัยต่อไปด้วยตัวของตัวเอง
+                </div>
+                <br>
+                <div class="fade-step-page fade-1800 chap5-page6-bgcontent">
+                    <img class="fade-step-nest fade-2500 chap5-page6-boat" src="./img/chapter5/page6/boat.png">
+
+                </div>
+                <br>
+                <div  class="fade-step-nest   fade-3000 txtchap1-page4" >
+                    เข้าไม่รู้ว่าหนทางข้างหน้าจะเป็นเช่นไร<br>
+                    และ <span class="chap5-page1-txt">ไม่แน่ใจว่าควรทำอย่างไร</span><br>
+                    หากต้องเผชิญกับคลื่นที่แรงขึ้น
+                </div>
+                <br>
+     
+           
+        </div>
+    
+
+        <div class="footechap1-page3" style="z-index: 2;">
+            <div  class="fade-step-page fade-3400" 
+            onclick="openOverlay('.overlayto_chap5-7')"   >
+                แตะเพื่อไปต่อ
+            </div>
+        </div>
+         </div>
+    <!-- chap5 page 6 end -->
+
+    <!-- chap5 page 7 start-->
+      <div class="overlay overlayto_chap5-7 overlay-slidedown_overlayto_chap5-7">
+
+        <div  class="chap1-page4">
+           
+                <div  class="fade-step-page txtchap1-page4 fade-1500" >
+                    เมื่อเรือลำเล็กแล่นออกจากฝั่ง
+                </div>
+                <br>
+                <div class="fade-step-page fade-1800 chap5-page7-bgcontent">
+                    <img class="fade-step-nest fade-2500 chap5-page4-prince" src="./img/chapter5/page7/family.png">
+
+                </div>
+                <br>
+                <div  class="fade-step-nest   fade-3000 txtchap1-page4" >
+                    เงาของพ่อกับแม่<span class="chap5-page1-txt">ค่อย ๆ เลือนหายไป</span><br>
+                    เหลือเพียงความคิดถึงที่ลอยไปกับสายน้ำ
+                </div>
+                <br>       
+        </div>
+    
+        <div class="footechap1-page3" style="z-index: 2;">
+            <div  class="fade-step-page fade-3400" 
+            onclick="openOverlay('.overlayto_chap5-8')"   >
+                แตะเพื่อไปต่อ
+            </div>
+        </div>
+
+     </div>
+    <!-- chap5 page 7 end-->
+
+    <!-- chap5 page 8 start-->
+       <div class="overlay overlayto_chap5-8 overlay-slidedown_overlayto_chap5-8">
+
+        <div  class="chap1-page4">
+           
+                <div  class="fade-step-page txtchap1-page4 fade-1500" >
+                    <span class="chap5-page1-txt">บางครั้ง กระแสน้ำก็แรงขึ้น<br>ราวกับจะพลัดุกอย่างไป</span>
+                </div>
+                <br>
+                <div class="fade-step-page fade-1800 chap5-page8-bgcontent1">
+                    <img class="fade-step-page8-1 fade-2500 chap5-page8-boat" src="./img/chapter5/page8/boat.png">
+                    <img class="fade-step-page8-2 fade-2500 chap5-page8-fish1" src="./img/chapter5/page8/fish-1.png">
+
+                </div>
+                <br>
+                <div  class="fade-step-nest   fade-3000 txtchap1-page4" >
+                    เพื่อนของเขาตอนนี้มีเพียง<br>
+                    <span class="chap5-page1-txt">ฝูงปลาที่ว่ายทวนไปเรื่อย ๆ </span><br>
+                    เหมือนกำลังแตกตื่นและพยายามหนีไปอีกทาง
+                </div>
+                <br>   
+                <div class="fade-step-page fade-3900 chap5-page8-bgcontent2">
+                    <img class="fade-step-page8-3 fade-4200 chap5-page8-fish3" src="./img/chapter5/page8/fish-2.png">
+
+
+                </div>
+                  
+        </div>
+    
+        <div class="footechap1-page3" style="z-index: 2;">
+            <div  class="fade-step-page fade-3400" 
+            onclick="openOverlay('.overlayto_chap5-9')"   >
+                แตะเพื่อไปต่อ
+            </div>
+        </div>
+
+     </div>
+    <!-- chap5 page 8 end-->
+
+       <!-- chap5 page 9 start-->
+    <div class="overlay overlayto_chap5-9 overlay-slidedown_overlayto_chap5-9">
+        <div  class="chap1-page3">
+            <div  class="fade-step-nest txtchap1-page3 fade-1500" >
+                "เส้นทางนี้ไม่พร้อมต้อนรับเขาเลย<br>
+                <span class="chap5-page1-txt">ทำไมมีแต่ความน่ากลัว</span><br>
+                นี่จะเป็นครั้งสุดท้ายหรือเปล่าที่เราต้องปรับตัว"
+            </div>
+        </div>
+        <div class="footerpage14 ">
+            <div    class="fade-step-page fade-2500" 
+            onclick="openOverlay('.overlayto_chap5-10')" >
+                แตะเพื่อไปต่อ
+            </div>
+        </div>
+     </div>
+    <!-- chap5 page 9 end-->
+
+    <!-- chap5 page10 start -->
+    <div class="overlay overlayto_chap5-10 overlay-slidedown_overlayto_chap5-10 ">
+
+        <div style=" height: 100%; position: relative;">
+            <div  class="fade-step-nest fade-1500 pic-nextstep" >
+                <div onclick="$('.chap5page10-2').addClass('open');"  class="pic-chap5-10" >
+                    <div class="chap1-positiondot">
+                        <img class="chap1-sizedot" src="./img/chapter5/dot-active.png">
+                        <img class="chap1-sizedot" src="./img/chapter5/dot.png">
+                        <img class="chap1-sizedot" src="./img/chapter5/dot.png">
+                    </div>
+                </div>    
+         
+            </div>
+            <div class="chap5page10-2">
+                <div onclick="
+                $('.chap5page10-3').addClass('open');
+                setTimeout(function(){
+                  $('#nextchap1').addClass('show');
+                }, 2000);
+              "class="pic-chap5-11" >
+                    <div class="chap1-positiondot">
+                        <img class="chap1-sizedot" src="./img/chapter5/dot.png">
+                        <img class="chap1-sizedot" src="./img/chapter5/dot-active.png">
+                        <img class="chap1-sizedot" src="./img/chapter5/dot.png">
+                    </div>
+                </div>
+         
+            </div>
+            <div class="chap5page10-3">
+                <div  class="pic-chap5-12" >
+                    <div class="chap1-positiondot">
+                        <img class="chap1-sizedot" src="./img/chapter5/dot.png">
+                        <img class="chap1-sizedot" src="./img/chapter5/dot.png">
+                        <img class="chap1-sizedot" src="./img/chapter5/dot-active.png">
+                    </div>
+                </div>
+
+                <div id="nextchap1" class="nextpage-pic">
+                    <div  class="fade-step-page fade-2500" 
+                    onclick="openOverlay('.overlayto_chap5-11')"   >
+                        แตะเพื่อไปต่อ
+                    </div>
+                </div>
+         
+            </div>
+        </div>  
+     </div>
+     <!-- chap5 page10 end -->
+
+    <!-- chap5 page 11 start-->
+        <div class="overlay overlayto_chap5-11 overlay-slidedown_overlayto_chap5-11">
+            <div  class="chap1-page3">
+                <div  class="fade-step-nest txtchap1-page3 fade-1500" >
+                    การล่องเรือในเส้นทางที่ไม่รู้จัก<br>
+                    เต็มไปด้วย <span class="chap5-page1-txt">ความหวั่นใจและไม่มั่นคง</span>
+                    <br><br>
+                    แต่ทุกระลอกคลื่นที่พัดผ่าน<br>
+                    จะสอนให้ลูกรู้จักวิธีการทำความคุ้นเคย<br>
+                    และปรับตัวในโลกใบใหม่
+                </div>
+            </div>
+            <div class="footerpage14 ">
+                <div    class="fade-step-page fade-2500" 
+                onclick="openOverlayResult('.overlayto_preresult')" >
+                    แตะเพื่อไปต่อ
+                </div>
+            </div>
+         </div>
+     <!-- chap5 page 11 end-->
+
+    
+
+
+    <div class="overlay overlayto_chap5-resultno overlay-slidedown_overlayto_chap5-resultno">
+        <div  class="chap1-page3">
+            <div  class="fade-step-nest txtchap1-page3 fade-1500" >
+                เรือไม้ลำนี้เล็กเกินไปสำหรับพวกเรา<br>
+                ลองค่อย ๆ เดินไปข้างหน้า<br>
+                จนกว่าจะเจอสะพานข้ามฝั่งดีกว่า
+            </div>
+        </div>
+        <div class="footerpage14 ">
+            <div    class="fade-step-page fade-2500" 
+            onclick="openOverlayResult('.overlayto_preresult')">
+                แตะเพื่อไปต่อ
+            </div>
+        </div>
+    </div>
+
+
+
+    
+</body>
+</html>
+
+
+    <script>
+    
+    function openOverlay(selector) {
+    
+    const $next = $(selector);
+    const $current = $('.overlay.open').not($next);
+    
+    // เปิดหน้าใหม่
+    $next
+      .addClass('open')
+      .removeClass('hidden')
+      .css('z-index', 2);
+    
+    // หน้าเก่าอยู่ล่าง
+    $current.css('z-index', 1);
+    
+    // หลัง slide-in → fade หน้าเก่า
+    setTimeout(() => {
+      $current.addClass('fade-up');
+    }, 700);
+    
+    // หลัง fade → ซ่อนหน้าเก่า (ไม่ remove open)
+    setTimeout(() => {
+      $current
+        .addClass('hidden')
+        .removeClass('fade-up')
+        .css({
+          zIndex: '',
+          top: '',
+          opacity: '',
+          transform: 'translateX(0)' // 🔒 ป้องกันเด้ง
+        });
+    }, 1100);
+    
+    /* ===== 800ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-800').addClass('show');
+    }, 800);
+    
+    /* ===== 1000ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-1000').addClass('show');
+    }, 1000);
+    
+    /* ===== 1500ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-1500').addClass('show');
+    }, 1500);
+    
+    /* ===== 1800ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-1800').addClass('show');
+    }, 1800);
+    
+    /* ===== 2100ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-2100').addClass('show');
+    }, 2100);
+    
+    /* ===== 2500ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-2500' ).addClass('show');
+    }, 2500);
+    
+    /* ===== 2700ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-2700').addClass('show');
+    }, 2700);
+    
+    /* ===== 3000ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-3000').addClass('show');
+    }, 3000);
+    
+    /* ===== 3200ms ===== */
+    setTimeout(() => {
+      $(selector).find(
+        '.fade-3200'
+      ).addClass('show');
+    }, 3200);
+    
+    /* ===== 3300ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-3300').addClass('show');
+    }, 3300);
+    
+    /* ===== 3400ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-3400').addClass('show');
+    }, 3400);
+    
+    /* ===== 3900ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-3900').addClass('show');
+    }, 3900);
+    
+    /* ===== 4200ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-4200').addClass('show');
+    }, 4200);
+    
+    /* ===== 4500ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-4500').addClass('show');
+    }, 4500);
+    
+    /* ===== 6000ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-6000').addClass('show');
+    }, 6000);
+    
+    /* ===== 6500ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-6500').addClass('show');
+    }, 6500);
+    
+    /* ===== 7000ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-7000').addClass('show');
+    }, 7000);
+    
+    /* ===== 7800ms ===== */
+    setTimeout(() => {
+      $(selector).find(
+        '.fade-7800'
+      ).addClass('show');
+    }, 7800);
+    
+    /* ===== 8800ms ===== */
+    setTimeout(() => {
+      $(selector).find('.fade-8800').addClass('show');
+    }, 8800);
+    
+    }
+    
+    
+    </script>
+    
+
+   
