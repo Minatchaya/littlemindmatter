@@ -6214,6 +6214,13 @@ height: 45px;
     z-index: 2;
     height: 47%;
   }
+  .result5-cloud {
+    position: absolute;
+    width: 100%;
+    bottom: 8px;
+    z-index: 2;
+    height: 47%;
+}
   .overlayto_preresult {
     position: fixed;
     width: 100%;
