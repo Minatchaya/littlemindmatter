@@ -3825,6 +3825,19 @@ height: 45px;
      height: 25%; 
      display: flex;
 }
+.coversizeimghome{
+    width: 100%;height: 124%;
+    object-fit: cover;
+    position: absolute;
+    top: -44px;
+    left: 0;
+    transition-duration: 0.5s;
+    transition-delay: 1s; 
+    z-index: 2;
+}
+.sub-01botton-home1_text01{
+    padding-left: 21px;
+}
 /* <!-- nice end --> */
 
  /* eve start */
@@ -6270,12 +6283,23 @@ height: 45px;
 
 @media (max-width: 393px){
       /* nice start  */
-      /* .btustartome{
+      /* /* .btustartome{
         background-color:lightgoldenrodyellow !important;
-      }
+      } */
        .sub-02botton-home1{
-        background-color: #D37FA1;
-       } */
+  
+        /* background-color: #D37FA1; */
+       } 
+       .sub-01botton-home1_text01{
+        padding-top: 16px;
+       }
+       .coversizeimghome{
+        height: 100%;
+        top: 0;
+       }
+       .sub-02botton-home1{
+        top: -65px;
+       }
       .coverlogostart_img{
         width: 120px;
         height: 120px;
@@ -6289,10 +6313,13 @@ height: 45px;
         font-size: var(--text13);
       }
       .sub03_hd01cardpage3{
-        font-size: var(--text16);
+        font-size: var(--text14);
       }
       .sub03_sub02cardpage3{
-        font-size: var(--text13);
+        font-size: var(--text12);
+      }
+      .sub-01-03botton-home1{
+        font-size: var(--text14);
       }
       .topic5page3{
         font-size: var(--text13);
@@ -6486,15 +6513,22 @@ height: 45px;
       } */
       /* .btustartome {
         width: 29%;
-        background-color: lightpink !important;
+        background-color: rgb(114, 58, 148) !important;
       } */
+      .covertop-home1{
+        height: 50%;
+      }
+   
       .coverlogostart_img {
         width: 182px;
         height: 153px;
     }
     .tusttogo1 {
-        padding-top: 213px;
+        padding-top: 153px;
+        padding-right: 54px;
+        font-size:var(--text14);
     }
+ 
     /* .txtpagenomornal{
         background-color: #a74c95;
     } */
@@ -6510,6 +6544,10 @@ height: 45px;
     }
     .content_everypottheapslo{
         height: 63vh;
+    }
+    .coverinfoch2{
+        height: 190px;
+        background-position: center;
     }
     /* nice end  */
 
